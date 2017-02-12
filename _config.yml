@@ -1,27 +1,53 @@
-# Site settings
-title: Martin Colahan
-const-title: Under Construction
-header-img: img/home-bg.jpg
-construction-img: img/under-construction-bg.jpg
-email: your-email@yourdomain.com
-copyright_name: Martin Colahan
-description: ""
-#baseurl: "startbootstrap-clean-blog-jekyll"
-url: "www.martincolahan.com"
-twitter_username: MartinColahan
-github_username:  mcolahan
-facebook_username:  martin.colahan
-email_username:  martin.l.colahan@gmail.com
-
-# Google Analytics
-# To enable google analytics, uncomment below line with a valid Google Tracking ID
-# google_tracking_id:
-
 # Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+permalink   : /blog/:year/:title/
+markdown    : kramdown
+highlighter : pygments
+gems: [jekyll-paginate]
 
-gems: [jekyll-paginate, jekyll-feed]
+paginate: 3
+paginate_path: "/blog/page/:num/"
+comments: false
+
+source: source
+destination: _site
+sass:
+  sass_dir: _scss
+  style: compressed # expanded
+
+# SEO settings
+title: Martin Colahan
+description: "Corrosion Engineer"
+keywords: "engineering, making, python, travel, SEO, blog"
+url: https://www.martincolahan.com
+baseurl: ""
+# baseurl: ""
+
+# google_analytics: UA-52446115-1
+repo: http://github.com/nandomoreirame/end2end
+disqus_shortname: "nandothemes"
+disqus_site_shortname: "nandothemes"
+
+# Author settings
+author:
+  name      : Martin Colahan
+  job       : Corrosion Engineer
+  bio       : "Engineer, Nerd, Maker, and Geek on the hunt for enlightenment and a cup of coffee."
+  thumb     : /images/author.jpg
+  email     : martin.l.colahan@gmail.com
+  url       : https://www.martincolahan.com
+  github    : http://github.com/mcolahan
+  facebook  : http://facebook.com/martin.colahan
+#  linkedin  : http://linkedin.com/in/nandomoreirame
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: resume
+    title: Resume
+  # - slug: skills
+  #   title: Skills
+  - slug: blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
